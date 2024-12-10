@@ -1,0 +1,29 @@
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Milk",
+  "category": "Dairy",
+  "description": "Whole pasteurized milk",
+  "unit_of_measure": "liters",
+  "is_active": true
+}
+
+POST http://localhost:3000/batches
+Content-Type: application/json
+
+{
+  "product_id": 1,
+  "quantity": 100,
+  "entry_date": "2024-12-01",
+  "expiration_date": "2024-15-12"
+}
+
+delete http://localhost:3000/batches
+Content-Type: application/json
+
+{
+  "product_id": 1,
+  "quantity": 15,
+  "reason": "Customer order"
+}
